@@ -1,4 +1,4 @@
-package com.fzx.study.sixth_simple.client;
+package com.fzx.study.seventh.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -19,7 +19,7 @@ public class MyProtoBufClient {
         Bootstrap bootstrap=new Bootstrap();
         bootstrap.group(eventLoopGroup).channel(NioSocketChannel.class)
                 .handler(new MyProtoBufClientInitoalizer());
-            ChannelFuture channelFuture=bootstrap.connect("127.0.0.1",10001).sync();
+            ChannelFuture channelFuture=bootstrap.connect("127.0.0.1",10002).sync();
 
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {

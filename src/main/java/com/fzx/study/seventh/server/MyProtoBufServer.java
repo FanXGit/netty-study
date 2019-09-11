@@ -1,4 +1,4 @@
-package com.fzx.study.sixth_simple.server;
+package com.fzx.study.seventh.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -24,7 +24,7 @@ public class MyProtoBufServer {
                 .childHandler(new MyProtoBufServerInitoalizer());
 
 
-        ChannelFuture channelFuture=serverBootstrap.bind(10001).sync();
+        ChannelFuture channelFuture=serverBootstrap.bind(10002).sync();
         channelFuture.channel().closeFuture().sync();
 
         boosEvent.shutdownGracefully();
